@@ -4,7 +4,8 @@ require('dotenv').config()
 let connection;
 let channel;
 
-const rabbitMQURL = process.RABBITMQ_URL
+const rabbitMQURL = process.env.RABBITMQ_URL
+
 async function connectRabbitMQ() {
   if (!connection) {
     connection = await amqp.connect(rabbitMQURL);
