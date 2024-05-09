@@ -22,8 +22,8 @@ const onGetUserNotifications = (req, res) => {
 };
 
 
-router.post('/notification-new', onCreateNotification);
-router.patch('/notification-read', onReadNotification);
+router.post('/notification', onCreateNotification);
+router.patch('/notification', onReadNotification);
 router.get('/notifications', onGetUserNotifications);
 // router.post('/user', onGetUser);
 
